@@ -1,0 +1,27 @@
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-button routerLink="/" class="thrid-button"><mat-icon>home</mat-icon>Auction</button>
+
+    
+      <span class="menu-spacer"></span>
+      
+      <span>
+       
+      </span>
+      <p mat-button *ngIf="isUserAuthenticated()" style=" margin: 3px 10px 0px 0px;">Hi, {{this.loggedinuser}}</p>
+      <button mat-button *ngIf="!isUserAuthenticated()" (click)="openDialog()" class="thrid-button">Login</button>
+      <button mat-button *ngIf="isUserAuthenticated()" (click)="logOut()" class="thrid-button">Log out</button>
+      <!--<button mat-button  routerLink="/bidders" class="thrid-button">bidder</button>-->
+
+     
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>
+
+
+

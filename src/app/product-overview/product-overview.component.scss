@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+}
+
+h3 {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card-wrapper {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.containa {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.img-display {
+    overflow: hidden;
+}
+
+.img-showcase {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.img-showcase img {
+    min-width: 100%;
+}
+
+.img-select {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-item {
+    margin: 0.3rem;
+    width: 18.5%;
+}
+
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+    margin-right: 0;
+}
+
+.img-item:hover {
+    opacity: 0.8;
+}
+
+.product-content {
+    padding: 2rem 1rem;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+    color: #12263a;
+    margin: 0 0;
+}
+
+.product-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    // background: #12263a;
+}
+
+.product-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.product-link:hover {
+    opacity: 0.9;
+}
+
+
+.product-price {
+    margin: 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.product-price span {
+    font-weight: 400;
+}
+
+.last-price span {
+    color: #f64749;
+    text-decoration: line-through;
+}
+
+.newprice- span {
+    color: #256eff;
+}
+
+.product-detail h2 {
+    text-transform: capitalize;
+    color: darkblue;
+    padding-bottom: 0.6rem;
+}
+
+.product-detail p {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+
+.product-detail ul {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.product-detail ul li {
+    margin: 0;
+    list-style: none;
+    background-size: 18px;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.product-detail ul li span {
+    font-weight: 400;
+    color: #12263a;
+}
+
+.purchase-info {
+    margin: 1.5rem 0;
+    display: flex;
+}
+
+.purchase-info input,
+.purchase-info .btn {
+    border: 1.5px solid #ddd;
+    height: 40px;
+
+
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.purchase-info input {
+    width: 60px;
+}
+
+.purchase-info .btn:hover {
+    background-color: #000;
+    color: #FFFFFF;
+}
+
+.purchase-info .btn:focus {
+    background-color: #000;
+    color: #FFFFFF;
+    box-shadow: #ddd;
+}
+
+.purchase-info .btn {
+    cursor: pointer;
+    color: #001D4E;
+    margin-left: 5px;
+    ;
+}
+
+.purchase-info .btn:hover {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 511px) {
+    .purchase-info {
+        display: block;
+    }
+
+    h3 {
+        font-family: 'Inter';
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .img-item {
+        margin: 0.3rem;
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+        padding-top: 30px;
+    }
+
+    .card-wrapper {
+
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .containa h3 {
+        margin: 0;
+    }
+
+
+
+    .product-imgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product-content {
+        padding-top: 0;
+    }
+}
+
+
+.form-group {
+    position: relative;
+    width: 300px;
+}
+
+.form-group input {
+    border: 2px solid #44C8F5;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    outline: none;
+    color: #44C8F5;
+    background: transparent;
+}
+
+.form-group label {
+    position: absolute;
+    top: 35%;
+    left: 0.8rem;
+    padding: 0 4px;
+    color: #001D4E;
+    font-size: 1em;
+    font-weight: 100;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:is(:focus, :valid),
+.btn:is(:focus, :valid) {
+    border: 2px solid #001D4E;
+    box-shadow: 0 5px 10px #001D4E;
+}
+
+.form-group input:is(:focus, :valid)+label {
+    top: 0;
+    padding: 0 4px;
+    color: #98CB4F;
+    background: #001D4E;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* Aligns items to both ends (right and left) */
+    align-items: center;
+    /* Vertically centers the items */
+}
+
+.blink {
+    background-color: yellow;
+    -webkit-animation: blink 800ms step-end infinite;
+    animation: blink 800ms step-end infinite;
+    font-weight: 500;
+    font-size: small;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 45px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.leftArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 45px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+
+
+.card> :first-child {
+    flex: 70%;
+}

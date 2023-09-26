@@ -1,0 +1,81 @@
+
+
+<div>
+      
+                
+<div class="container">
+        
+    
+   
+    
+    <div class="cards" *ngFor="let vehicle of vehicleImage">
+    
+      <div class="card-item">
+        <div class="card-image">
+            <img src="{{vehicle.imageUrl}}"/>
+        </div>
+        <div class="card-info">
+          <h2 class="card-title">
+            {{vehicle.vehicle.name}}
+            <span *ngIf="vehicle.countdown?.seconds || vehicle.countdown?.minutes || vehicle.countdown?.hours || vehicle.countdown?.days; else bidClosed" class="blink">BID ONGOING</span>
+            <ng-template #bidClosed ><span class="blink-stop">Bid Closed</span></ng-template>
+          </h2>
+          
+          <ul class="shortdesc">
+            <div class="block">
+              <li class="b"><span>Color: </span><br>{{vehicle.vehicle.exteriorColor}}</li>
+            </div>
+            <div class="block">
+              <li class="c"><span>Interior: </span><br>{{vehicle.vehicle.interiorColor}}</li>
+            </div>
+            <div class="block">
+              <li class="d"><span>Engine Type: </span><br>{{vehicle.vehicle.engineType}}</li>
+            </div>
+            <div class="block">
+              <li class="e" *ngIf="vehicle.vehicle.bid"><span>Fuel Type: </span><br>{{vehicle.vehicle.fuelType}}</li>
+            </div>
+            
+          </ul>
+          <section [ngClass]="{'margin': isHandset}">
+            <ul id="countdown">
+              <li><span class="days timenumbers">{{vehicle.countdown?.days|| 0}} </span>
+                <p class="timeRefDays timedescription">days</p>
+              </li><span class="spots">:</span>
+              <li><span class="hours timenumbers">{{vehicle.countdown?.hours || 0}}</span>
+                <p class="timeRefHours timedescription">hours</p>
+              </li><span class="spots" *ngIf="!isHandset">:</span>
+              <li><span class="minutes timenumbers">{{vehicle.countdown?.minutes|| 0}}</span>
+                <p class="timeRefMinutes timedescription">minutes</p>
+              </li><span class="spots">:</span>
+              <li><span class="seconds timenumbers yellow-text">{{vehicle.countdown?.seconds || 0}}</span>
+                <p class="timeRefSeconds timedescription">seconds</p>
+              </li>
+            </ul>
+          </section>
+         
+          
+        </div>
+        
+        <div class="card-link wrapper" style="margin: 10px;" *ngIf="vehicle.countdown?.seconds || vehicle.countdown?.minutes || vehicle.countdown?.hours || vehicle.countdown?.days; else bidClosed">
+            <!--<a href="#" title="<strong>Make a Bid</strong>"><span><strong>Make a Bid</strong></span></a>-->
+            <button class="custom-btn btn-5" #bidClosed (click)="productnav(vehicle)" ><span><strong>Make a Bid</strong></span></button>
+        </div>
+      </div>
+    </div>
+
+
+  
+   
+</div>
+</div>   
+      
+        
+
+
+
+
+
+
+    
+
+

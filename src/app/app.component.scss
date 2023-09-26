@@ -1,0 +1,46 @@
+mat-toolbar {
+    background: #001D4E;
+    color: white;
+
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+
+
+/***********THRID BUTTON*************/
+
+.thrid-button {
+    width: 100px;
+    height: 30px;
+    border: 3px rgba(14, 192, 106, 0.636) solid;
+    position: relative;
+    color: rgba(14, 192, 106, 0.664);
+    margin-right: 5px;
+}
+
+.thrid-button::before {
+    width: 110px;
+    height: 40px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.thrid-button:hover::before {
+
+    border: 3px rgb(14, 192, 106) solid;
+    box-shadow: 0px 5px 25px 1px rgb(14, 192, 106);
+    color: rgb(14, 192, 106);
+    transform: scale(1);
+
+}
+
+.thrid-button:hover {
+    color: rgb(14, 192, 106);
+    border: 3px rgb(14, 192, 106) solid;
+}
